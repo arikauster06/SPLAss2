@@ -10,6 +10,8 @@ import org.junit.jupiter.api.AfterAll;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Dictionary;
+import java.util.Hashtable;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -17,9 +19,6 @@ import java.util.concurrent.atomic.AtomicLong;
 
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.experimental.theories.*;
-import org.junit.runner.RunWith;
 
 
 public class MessageBusTest {
@@ -81,6 +80,7 @@ public class MessageBusTest {
         assertEquals(TestText, future.get());
 
         microServiceTest.terminate();
+
     }
 
     @Test
@@ -95,6 +95,7 @@ public class MessageBusTest {
             @Override
             protected void initialize() {
                 subscribeBroadcast(TestBroadcast.class, c -> {
+
                     future.resolve(TestText);
                 });
             }

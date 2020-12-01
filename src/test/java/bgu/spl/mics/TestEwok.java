@@ -20,9 +20,6 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.experimental.theories.*;
-import org.junit.runner.RunWith;
-
 public class TestEwok {
 
     private Ewok ewok;
