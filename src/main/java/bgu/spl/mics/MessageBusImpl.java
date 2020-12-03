@@ -56,13 +56,18 @@ public class MessageBusImpl implements MessageBus {
     @Override
     @SuppressWarnings("unchecked")
     public <T> void complete(Event<T> e, T result) {
-        eventFutureDictionary.get(e).resolve(result);
-        eventFutureDictionary.remove(e);
+        synchronized (e) {
+            if (eventFutureDictionary.get(e) != null) {
+                eventFutureDictionary.get(e).resolve(result);
+                eventFutureDictionary.remove(e);
+            }
+        }
     }
 
     @Override
     public void sendBroadcast(Broadcast b) {
-        messageHandlers.get(b.getClass()).PutMessage(b, servicesQueues);
+        if (messageHandlers.get(b.getClass()) != null)
+            messageHandlers.get(b.getClass()).PutMessage(b, servicesQueues);
     }
 
 

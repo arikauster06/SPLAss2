@@ -15,25 +15,35 @@ public class Ewok {
         available = true;
     }
 
-    public boolean isAvailable() {
+    public synchronized boolean isAvailable() {
         return this.available;
     }
 
-    public int getSerialNumber(){
+    public int getSerialNumber() {
         return this.serialNumber;
     }
 
     /**
      * Acquires an Ewok
      */
-    public void acquire() {
-
+    public synchronized void acquire() {
+        while (!this.available) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        this.available = false;
     }
 
     /**
      * release an Ewok
      */
-    public void release() {
-
+    public synchronized void release() {
+        if (!isAvailable()) {
+            available = true;
+            notifyAll();
+        }
     }
 }
