@@ -6,6 +6,8 @@ import bgu.spl.mics.application.messages.AttackEvent;
 import bgu.spl.mics.application.messages.TerminateBroadcast;
 import bgu.spl.mics.application.passiveObjects.Diary;
 
+import java.util.Date;
+
 /**
  * HanSoloMicroservices is in charge of the handling {@link AttackEvent}.
  * This class may not hold references for objects which it is not responsible for:
@@ -23,7 +25,9 @@ public class HanSoloMicroservice extends MicroService {
 
     @Override
     protected void initialize() {
+        System.out.println("han Solo Initialize");
         subscribeEvent(AttackEvent.class, event -> {
+
 //            Ewoks.getInstance().acquire(event.getAttack().getSerials());
 //            try {
 //                Thread.sleep(event.getAttack().getDuration());
@@ -34,7 +38,7 @@ public class HanSoloMicroservice extends MicroService {
 //
 //            Diary.getInstance().IncrementAttacksAmount();
             AttackUtilis.attackCallback.call(event);
-
+            System.out.println("Han solo attacks at " + new Date());
             complete(event, Boolean.TRUE);
             Diary.getInstance().setHanSoloFinish(System.currentTimeMillis());
 
@@ -43,7 +47,8 @@ public class HanSoloMicroservice extends MicroService {
             Diary.getInstance().setHanSoloTerminate(System.currentTimeMillis());
             terminate();
         });
-
+        System.out.println("hanSolo finish initialize at " + new Date());
         Diary.getInstance().AttackerCountdown();
+
     }
 }

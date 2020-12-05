@@ -1,64 +1,56 @@
 package bgu.spl.mics.messageHandlers;
 
 
-import bgu.spl.mics.Event;
 import bgu.spl.mics.Message;
 import bgu.spl.mics.MicroService;
 
-import java.util.ArrayList;
-import java.util.Dictionary;
-import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 
-public class EventHandler extends MessageHandler {
+public class EventHandler implements MessageHandler {
 
-    private int lastIndex;
-    private ConcurrentLinkedQueue<MicroService> serives2;
+    private ConcurrentLinkedQueue<MicroService> serives;
 
     public EventHandler() {
-        super();
-        lastIndex = -1;
-        serives2 = new ConcurrentLinkedQueue();
+        serives = new ConcurrentLinkedQueue();
     }
 
     @Override
     public void AddHandler(MicroService service) {
-        serives2.add(service);
+        serives.add(service);
     }
 
     @Override
     public void RemoveHandler(MicroService service) {
-//        int index = services.indexOf(service);
-//        if (index != -1 && index <= lastIndex) {
-//            lastIndex--;
-//        }
-//        super.RemoveHandler(service);
-        serives2.remove(service);
+        serives.remove(service);
     }
 
     @Override
     public void PutMessage(Message msg, ConcurrentHashMap<MicroService, LinkedBlockingQueue<Message>> servicesQues) {
         MicroService activator;
         synchronized (this) {
-//            int index = lastIndex;
-//            activator = services.get(index);
-//            lastIndex = (lastIndex + 1) % services.size();
-            activator = serives2.poll();
+            activator = serives.poll();
             AddHandler(activator);
         }
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    servicesQues.get(activator).put(msg);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
+        try {
+            servicesQues.get(activator).put(msg);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        // Only Happens if the MicroService called unregistered, and the messageBus deleted it from the mao
+        // In that case the queue is not exists anymore, and further more, the microservice is not handing
+        // events nor broadcast anymore
+        catch (NullPointerException e) {
+            System.out.println("MicroService is has unregistered");
+        }
+
+    }
+
+    @Override
+    public boolean hasMicroservice(MicroService microService) {
+        return serives.contains(microService);
     }
 }

@@ -3,27 +3,17 @@ package bgu.spl.mics.messageHandlers;
 import bgu.spl.mics.Message;
 import bgu.spl.mics.MicroService;
 
-import java.util.ArrayList;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
 
 
-public abstract class MessageHandler {
-    protected ArrayList<MicroService> services;
+public interface MessageHandler {
 
-    public MessageHandler() {
-        services = new ArrayList<>();
-    }
+    void AddHandler(MicroService service);
 
-    public void AddHandler(MicroService service) {
-        services.add(service);
-    }
+    void RemoveHandler(MicroService service);
 
-    public void RemoveHandler(MicroService service) {
-        if(services.indexOf(service)!=-1) {
-            services.remove(service);
-        }
-    }
+    void PutMessage(Message msg, ConcurrentHashMap<MicroService, LinkedBlockingQueue<Message>> servicesQues);
 
-    public abstract void PutMessage(Message msg, ConcurrentHashMap<MicroService, LinkedBlockingQueue<Message>> servicesQues);
+    boolean hasMicroservice(MicroService microService);
 }

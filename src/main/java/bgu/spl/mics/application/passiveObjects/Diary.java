@@ -1,6 +1,7 @@
 package bgu.spl.mics.application.passiveObjects;
 
 
+import java.util.Date;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -70,6 +71,7 @@ public class Diary {
     }
 
     public void setR2D2Deactivate(long r2D2Deactivate) {
+        System.out.println("R2D2 Deactivates at " + new Date());
         R2D2Deactivate = r2D2Deactivate;
     }
 

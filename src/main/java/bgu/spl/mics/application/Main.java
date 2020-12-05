@@ -1,7 +1,17 @@
 package bgu.spl.mics.application;
 
+import bgu.spl.mics.application.passiveObjects.AppInputData;
 import bgu.spl.mics.application.passiveObjects.Diary;
+import bgu.spl.mics.application.passiveObjects.Ewoks;
+import bgu.spl.mics.application.services.*;
 import com.google.gson.Gson;
+
+import java.io.IOException;
+import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Date;
+import java.util.Map;
 
 /**
  * This is the Main class of the application. You should parse the input file,
@@ -11,18 +21,60 @@ import com.google.gson.Gson;
 public class Main {
     public static void main(String[] args) {
 
+        LeiaMicroservice Leia;
+        HanSoloMicroservice HanSolo;
+        C3POMicroservice C3PO;
+        R2D2Microservice R2D2;
+        LandoMicroservice Lando;
+
+        System.out.println(new Date());
+
         Diary.getInstance().initializeAttackersCountdown(2);
         Diary.getInstance().initializeTerminationCountdown(5);
 
-        Gson json = new Gson();
-
-
+        Gson gson = new Gson();
         try {
+            Reader reader = Files.newBufferedReader(Paths.get("C:\\Users\\nadav\\Documents\\SPL\\Work2\\SPL211\\src\\main\\java\\bgu\\spl\\mics\\application\\input.json"));
+
+            AppInputData inputData = gson.fromJson(reader, AppInputData.class);
+
+            Ewoks.initialize(inputData.getEwoks());
+
+            Leia = new LeiaMicroservice(inputData.getAttacks());
+            HanSolo = new HanSoloMicroservice();
+            C3PO = new C3POMicroservice();
+            R2D2 = new R2D2Microservice(inputData.getR2D2());
+            Lando = new LandoMicroservice(inputData.getLando());
+
+            Thread LeiaThread = new Thread(Leia, "Leia-Thread");
+            Thread HanSoloThread = new Thread(HanSolo, "HanSolo-Thread");
+            Thread C3POTThread = new Thread(C3PO, "C3PO-Thread");
+            Thread R2D2Thread = new Thread(R2D2, "R2D2-Thread");
+            Thread LandoThread = new Thread(Lando, "Lando-Thread");
+
+            LeiaThread.start();
+            HanSoloThread.start();
+            C3POTThread.start();
+            R2D2Thread.start();
+            LandoThread.start();
+
+
+            // Terminating
             Diary.getInstance().TerminationAwait();
+            //Thread.sleep(500);
+            System.out.println("Leia alive - "+ LeiaThread.isAlive());
+            System.out.println("Han Solo alive - "+ HanSoloThread.isAlive());
+            System.out.println("C3PO alive - "+ C3POTThread.isAlive());
+            System.out.println("R2D2 alive - "+ R2D2Thread.isAlive());
+            System.out.println("Lando alive - "+ LandoThread.isAlive());
+
+            System.out.println("Terminated");
+
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
 
     }
 }

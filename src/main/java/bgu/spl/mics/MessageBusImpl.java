@@ -5,6 +5,7 @@ import bgu.spl.mics.messageHandlers.BroadcastHandler;
 import bgu.spl.mics.messageHandlers.EventHandler;
 import bgu.spl.mics.messageHandlers.MessageHandler;
 
+import java.util.Date;
 import java.util.Dictionary;
 import java.util.Enumeration;
 import java.util.Hashtable;
@@ -32,7 +33,11 @@ public class MessageBusImpl implements MessageBus {
 
     public static MessageBusImpl getInstance() {
         if (instance == null) {
-            instance = new MessageBusImpl();
+            synchronized (MessageBusImpl.class) {
+                if (instance == null) {
+                    instance = new MessageBusImpl();
+                }
+            }
         }
         return instance;
     }
@@ -40,7 +45,11 @@ public class MessageBusImpl implements MessageBus {
     @Override
     public <T> void subscribeEvent(Class<? extends Event<T>> type, MicroService m) {
         if (messageHandlers.get(type) == null) {
-            messageHandlers.put(type, new EventHandler());
+            synchronized (type) {
+                if (messageHandlers.get(type) == null) {
+                    messageHandlers.put(type, new EventHandler());
+                }
+            }
         }
         messageHandlers.get(type).AddHandler(m);
     }
@@ -48,7 +57,11 @@ public class MessageBusImpl implements MessageBus {
     @Override
     public void subscribeBroadcast(Class<? extends Broadcast> type, MicroService m) {
         if (messageHandlers.get(type) == null) {
-            messageHandlers.put(type, new BroadcastHandler());
+            synchronized (type) {
+                if (messageHandlers.get(type) == null) {
+                    messageHandlers.put(type, new BroadcastHandler());
+                }
+            }
         }
         messageHandlers.get(type).AddHandler(m);
     }
@@ -66,36 +79,53 @@ public class MessageBusImpl implements MessageBus {
 
     @Override
     public void sendBroadcast(Broadcast b) {
-        if (messageHandlers.get(b.getClass()) != null)
-            messageHandlers.get(b.getClass()).PutMessage(b, servicesQueues);
+        new Thread(() ->
+        {
+            if (messageHandlers.get(b.getClass()) != null)
+                messageHandlers.get(b.getClass()).PutMessage(b, servicesQueues);
+        }).start();
     }
 
 
     @Override
     public <T> Future<T> sendEvent(Event<T> e) {
         Future<T> future = new Future<>();
-        eventFutureDictionary.put(e, future);
 
-        messageHandlers.get(e.getClass()).PutMessage(e, servicesQueues);
+        new Thread(() -> {
+            eventFutureDictionary.put(e, future);
+            messageHandlers.get(e.getClass()).PutMessage(e, servicesQueues);
+        }).start();
+
 
         return future;
     }
 
     @Override
     public void register(MicroService m) {
+        // In here we aren't worried about synchronization, because register happens
+        // before any other action which related to "initialization part", which happens in the same thread
         if (servicesQueues.get(m) == null) {
+            //System.out.println(m.name + " registers at " + new Date());
             servicesQueues.put(m, new LinkedBlockingQueue<Message>());
+            System.out.println(servicesQueues);
         }
     }
 
     @Override
     public void unregister(MicroService m) {
         if (servicesQueues.get(m) != null) {
+            // Removing the service from all the events and broadcast handlers
             for (Enumeration<MessageHandler> handlerEnu = messageHandlers.elements(); handlerEnu.hasMoreElements(); ) {
                 MessageHandler handler = handlerEnu.nextElement();
-                handler.RemoveHandler(m);
+                // Unregister can only preformed once.
+                // Moreover the only place where a microservice is being removed from an handler is ,
+                // here
+                // therefore we can call this async methods
+                if (handler.hasMicroservice(m)) {
+                    handler.RemoveHandler(m);
+                }
             }
-            servicesQueues.get(m).notifyAll();
+            // finally removing its' queue from the map, indicating it won't be used anymore
             servicesQueues.remove(m);
         }
     }
@@ -103,7 +133,12 @@ public class MessageBusImpl implements MessageBus {
     @Override
     public Message awaitMessage(MicroService m) throws InterruptedException {
 
-        Message msg = servicesQueues.get(m).take();
+        Message msg = null;
+        try {
+            msg = servicesQueues.get(m).take();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
         return msg;
     }
 }

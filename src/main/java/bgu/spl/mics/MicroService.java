@@ -1,6 +1,7 @@
 package bgu.spl.mics;
 
 
+import java.util.Date;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
@@ -23,8 +24,8 @@ import java.util.Hashtable;
  * <p>
  */
 public abstract class MicroService implements Runnable {
-    Dictionary<Class, Callback> messageReactAction;
-    String name;
+    private Dictionary<Class, Callback> messageReactAction;
+    private String name;
 
     /**
      * @param name the micro-service name (used mainly for debugging purposes -
@@ -58,8 +59,7 @@ public abstract class MicroService implements Runnable {
      *                 queue.
      */
     protected final <T, E extends Event<T>> void subscribeEvent(Class<E> type, Callback<E> callback) {
-        if(messageReactAction.get(type)==null)
-        {
+        if (messageReactAction.get(type) == null) {
             MessageBusImpl.getInstance().subscribeEvent(type, this);
         }
         messageReactAction.put(type, callback);
@@ -87,8 +87,7 @@ public abstract class MicroService implements Runnable {
      *                 queue.
      */
     protected final <B extends Broadcast> void subscribeBroadcast(Class<B> type, Callback<B> callback) {
-        if(messageReactAction.get(type)==null)
-        {
+        if (messageReactAction.get(type) == null) {
             MessageBusImpl.getInstance().subscribeBroadcast(type, this);
         }
         messageReactAction.put(type, callback);
@@ -149,6 +148,7 @@ public abstract class MicroService implements Runnable {
      * message.
      */
     protected final void terminate() {
+        System.out.println(name + " Terminates at " + new Date());
         Thread.currentThread().interrupt();
     }
 
@@ -168,8 +168,7 @@ public abstract class MicroService implements Runnable {
     public final void run() {
         MessageBusImpl.getInstance().register(this);
         initialize();
-        while (!Thread.interrupted())
-        {
+        while (!Thread.interrupted()) {
             Message message = null;
             try {
                 message = MessageBusImpl.getInstance().awaitMessage(this);
