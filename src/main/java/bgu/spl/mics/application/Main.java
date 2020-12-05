@@ -6,11 +6,14 @@ import bgu.spl.mics.application.passiveObjects.Ewoks;
 import bgu.spl.mics.application.services.*;
 import com.google.gson.Gson;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
+import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -62,13 +65,32 @@ public class Main {
             // Terminating
             Diary.getInstance().TerminationAwait();
             //Thread.sleep(500);
-            System.out.println("Leia alive - "+ LeiaThread.isAlive());
-            System.out.println("Han Solo alive - "+ HanSoloThread.isAlive());
-            System.out.println("C3PO alive - "+ C3POTThread.isAlive());
-            System.out.println("R2D2 alive - "+ R2D2Thread.isAlive());
-            System.out.println("Lando alive - "+ LandoThread.isAlive());
+            System.out.println("Leia alive - " + LeiaThread.isAlive());
+            System.out.println("Han Solo alive - " + HanSoloThread.isAlive());
+            System.out.println("C3PO alive - " + C3POTThread.isAlive());
+            System.out.println("R2D2 alive - " + R2D2Thread.isAlive());
+            System.out.println("Lando alive - " + LandoThread.isAlive());
 
             System.out.println("Terminated");
+
+
+            Map<String, Object> outputMap = new HashMap<>();
+
+            outputMap.put("totalAttacks", Diary.getInstance().getTotalAttacks());
+            outputMap.put("HanSoloFinish", Diary.getInstance().getHanSoloFinish());
+            outputMap.put("C3POFinish", Diary.getInstance().getC3POFinish());
+            outputMap.put("R2D2Deactivate", Diary.getInstance().getR2D2Deactivate());
+            outputMap.put("LeiaTerminate", Diary.getInstance().getLeiaTerminate());
+            outputMap.put("HanSoloTerminate", Diary.getInstance().getHanSoloTerminate());
+            outputMap.put("C3POTerminate", Diary.getInstance().getC3POTerminate());
+            outputMap.put("R2D2Terminate", Diary.getInstance().getR2D2Terminate());
+            outputMap.put("LandoTerminate", Diary.getInstance().getLandoTerminate());
+
+            Gson outputGson = new Gson();
+            Writer writer = new FileWriter(args[1]);
+            outputGson.toJson(outputMap, writer);
+            writer.close();
+
 
         } catch (InterruptedException e) {
             e.printStackTrace();
