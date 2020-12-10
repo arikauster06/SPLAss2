@@ -22,7 +22,7 @@ public class LandoMicroservice extends MicroService {
 
     @Override
     protected void initialize() {
-        System.out.println("Lando Initialize");
+        //System.out.println("Lando Initialize");
         subscribeEvent(BombDestroyerEvent.class, event -> {
             try {
                 Thread.sleep(duration);
@@ -31,7 +31,8 @@ public class LandoMicroservice extends MicroService {
             }
 
             complete(event, Boolean.TRUE);
-            System.out.println("Lando Bombs at " + new Date());
+
+            //System.out.println("Lando Bombs at " + new Date());
         });
 
         subscribeBroadcast(TerminateBroadcast.class, broadcast -> {
@@ -39,6 +40,6 @@ public class LandoMicroservice extends MicroService {
             terminate();
         });
 
-        System.out.println("Lando finish initialize at " + new Date());
+        //System.out.println("Lando finish initialize at " + new Date());
     }
 }

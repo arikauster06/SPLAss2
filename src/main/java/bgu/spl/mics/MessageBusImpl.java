@@ -1,14 +1,7 @@
 package bgu.spl.mics;
 
 
-import bgu.spl.mics.messageHandlers.BroadcastHandler;
-import bgu.spl.mics.messageHandlers.EventHandler;
-import bgu.spl.mics.messageHandlers.MessageHandler;
-
-import java.util.Date;
-import java.util.Dictionary;
 import java.util.Enumeration;
-import java.util.Hashtable;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -19,51 +12,43 @@ import java.util.concurrent.LinkedBlockingQueue;
  */
 public class MessageBusImpl implements MessageBus {
 
-    private static MessageBusImpl instance = null;
-    ConcurrentHashMap<MicroService, LinkedBlockingQueue<Message>> servicesQueues;
-    ConcurrentHashMap<Class, MessageHandler> messageHandlers;
-    ConcurrentHashMap<Event, Future> eventFutureDictionary;
+    private static class MessageBusHolder {
+        private static MessageBusImpl instance = new MessageBusImpl();
+    }
+
+    private ConcurrentHashMap<MicroService, LinkedBlockingQueue<Message>> servicesQueues;
+    private ConcurrentHashMap<Class<? extends Message>, LinkedBlockingQueue<MicroService>> messageHandlers;
+    private ConcurrentHashMap<Event, Future> eventFutureDictionary;
 
 
     private MessageBusImpl() {
         servicesQueues = new ConcurrentHashMap<>();
-        messageHandlers = new ConcurrentHashMap<>();
         eventFutureDictionary = new ConcurrentHashMap<>();
+        messageHandlers = new ConcurrentHashMap<>();
     }
 
     public static MessageBusImpl getInstance() {
-        if (instance == null) {
-            synchronized (MessageBusImpl.class) {
-                if (instance == null) {
-                    instance = new MessageBusImpl();
-                }
-            }
-        }
-        return instance;
+        return MessageBusHolder.instance;
     }
 
     @Override
     public <T> void subscribeEvent(Class<? extends Event<T>> type, MicroService m) {
-        if (messageHandlers.get(type) == null) {
-            synchronized (type) {
-                if (messageHandlers.get(type) == null) {
-                    messageHandlers.put(type, new EventHandler());
-                }
+        synchronized (type) {
+            if (messageHandlers.get(type) == null) {
+                messageHandlers.put(type, new LinkedBlockingQueue<>());
             }
+            messageHandlers.get(type).add(m);
         }
-        messageHandlers.get(type).AddHandler(m);
     }
 
     @Override
     public void subscribeBroadcast(Class<? extends Broadcast> type, MicroService m) {
-        if (messageHandlers.get(type) == null) {
-            synchronized (type) {
-                if (messageHandlers.get(type) == null) {
-                    messageHandlers.put(type, new BroadcastHandler());
-                }
+        synchronized (type) {
+            if (messageHandlers.get(type) == null) {
+                messageHandlers.put(type, new LinkedBlockingQueue<>());
             }
+            messageHandlers.get(type).add(m);
         }
-        messageHandlers.get(type).AddHandler(m);
     }
 
     @Override
@@ -79,25 +64,69 @@ public class MessageBusImpl implements MessageBus {
 
     @Override
     public void sendBroadcast(Broadcast b) {
-        new Thread(() ->
-        {
-            if (messageHandlers.get(b.getClass()) != null)
-                messageHandlers.get(b.getClass()).PutMessage(b, servicesQueues);
-        }).start();
+//        new Thread(() ->
+//        {
+//            if (messageHandlers.get(b.getClass()) != null)
+//                messageHandlers.get(b.getClass()).PutMessage(b, servicesQueues);
+//        }).start();
+        // in case that there is no one how can handle this type of broadcast we ignore it
+        if (messageHandlers.get(b.getClass()) != null &&
+                !messageHandlers.get(b.getClass()).isEmpty()) {
+            for (MicroService activator : messageHandlers.get(b.getClass())) {
+                //System.out.println("Sending " + msg + "\t To " + activator);
+                try {
+                    servicesQueues.get(activator).put(b);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                // Only Happens if the MicroService called unregistered, and the messageBus deleted it from the mao
+                // In that case the queue is not exists anymore, and further more, the microservice is not handing
+                // events nor broadcast anymore
+                catch (NullPointerException e) {
+                    System.out.println("MicroService has unregistered");
+                }
+            }
+        }
     }
 
 
     @Override
     public <T> Future<T> sendEvent(Event<T> e) {
+        // in case that there is no one how can handle this type of event we ignore the event
+        if (messageHandlers.get(e.getClass()) == null ||
+                messageHandlers.get(e.getClass()).isEmpty()) {
+            return null;
+        }
+
         Future<T> future = new Future<>();
+        eventFutureDictionary.put(e, future);
+//        synchronized (e.getClass()) {
 
-        new Thread(() -> {
-            eventFutureDictionary.put(e, future);
-            messageHandlers.get(e.getClass()).PutMessage(e, servicesQueues);
-        }).start();
+        MicroService activator;
+        boolean isSent = false;
+        do {
+            synchronized (e.getClass()) {
+                activator = messageHandlers.get(e.getClass()).peek();
+                messageHandlers.get(e.getClass()).add(activator);
+                messageHandlers.get(e.getClass()).poll();
 
+            }
+
+            try {
+                isSent = servicesQueues.get(activator).offer(e);
+            }
+            // Only Happens if the MicroService called unregistered, and the messageBus deleted it from the mao
+            // In that case the queue is not exists anymore, and further more, the microservice is not handing
+            // events nor broadcast anymore
+            catch (NullPointerException error) {
+                System.out.println("MicroService has unregistered");
+            }
+        }
+        while (!isSent);
+//            messageHandlers.get(e.getClass()).PutMessage(e, servicesQueues);
 
         return future;
+
     }
 
     @Override
@@ -107,7 +136,7 @@ public class MessageBusImpl implements MessageBus {
         if (servicesQueues.get(m) == null) {
             //System.out.println(m.name + " registers at " + new Date());
             servicesQueues.put(m, new LinkedBlockingQueue<Message>());
-            System.out.println(servicesQueues);
+            //System.out.println(servicesQueues);
         }
     }
 
@@ -115,16 +144,17 @@ public class MessageBusImpl implements MessageBus {
     public void unregister(MicroService m) {
         if (servicesQueues.get(m) != null) {
             // Removing the service from all the events and broadcast handlers
-            for (Enumeration<MessageHandler> handlerEnu = messageHandlers.elements(); handlerEnu.hasMoreElements(); ) {
-                MessageHandler handler = handlerEnu.nextElement();
+            for (Enumeration<LinkedBlockingQueue<MicroService>> handlerEnu = messageHandlers.elements(); handlerEnu.hasMoreElements(); ) {
+                LinkedBlockingQueue que = handlerEnu.nextElement();
                 // Unregister can only preformed once.
                 // Moreover the only place where a microservice is being removed from an handler is ,
                 // here
                 // therefore we can call this async methods
-                if (handler.hasMicroservice(m)) {
-                    handler.RemoveHandler(m);
+                if (que.contains(m)) {
+                    que.remove(m);
                 }
             }
+
             // finally removing its' queue from the map, indicating it won't be used anymore
             servicesQueues.remove(m);
         }
@@ -135,9 +165,10 @@ public class MessageBusImpl implements MessageBus {
 
         Message msg = null;
         try {
+            //while (servicesQueues.get((m)) == null) ;
             msg = servicesQueues.get(m).take();
         } catch (NullPointerException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
         return msg;
     }

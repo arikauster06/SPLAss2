@@ -25,7 +25,7 @@ public class HanSoloMicroservice extends MicroService {
 
     @Override
     protected void initialize() {
-        System.out.println("han Solo Initialize");
+        //System.out.println("han Solo Initialize");
         subscribeEvent(AttackEvent.class, event -> {
 
 //            Ewoks.getInstance().acquire(event.getAttack().getSerials());
@@ -37,17 +37,20 @@ public class HanSoloMicroservice extends MicroService {
 //            Ewoks.getInstance().release(event.getAttack().getSerials());
 //
 //            Diary.getInstance().IncrementAttacksAmount();
+
+            //System.out.println("Han solo attacks with Ewoks: "+ event.getAttack().getSerials().toString() + " Attack Duretion:"+ event.getAttack().getDuration()+" At : " + new Date());
             AttackUtilis.attackCallback.call(event);
-            System.out.println("Han solo attacks at " + new Date());
-            complete(event, Boolean.TRUE);
             Diary.getInstance().setHanSoloFinish(System.currentTimeMillis());
+            //System.out.println("Han Solo finished its' attack");
+            complete(event, Boolean.TRUE);
+
 
         });
         subscribeBroadcast(TerminateBroadcast.class, broadcast -> {
             Diary.getInstance().setHanSoloTerminate(System.currentTimeMillis());
             terminate();
         });
-        System.out.println("hanSolo finish initialize at " + new Date());
+        //System.out.println("hanSolo finish initialize at " + new Date());
         Diary.getInstance().AttackerCountdown();
 
     }

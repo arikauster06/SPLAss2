@@ -71,7 +71,7 @@ public class Diary {
     }
 
     public void setR2D2Deactivate(long r2D2Deactivate) {
-        System.out.println("R2D2 Deactivates at " + new Date());
+        //System.out.println("R2D2 Deactivates at " + new Date());
         R2D2Deactivate = r2D2Deactivate;
     }
 
@@ -159,5 +159,9 @@ public class Diary {
 
     public AtomicInteger getTotalAttacks() {
         return totalAttacks;
+    }
+
+    public void resetNumberAttacks() {
+        totalAttacks.set(0);
     }
 }

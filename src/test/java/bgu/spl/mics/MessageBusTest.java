@@ -1,22 +1,8 @@
 package bgu.spl.mics;
 
-import bgu.spl.mics.Event;
-import bgu.spl.mics.Broadcast;
-import bgu.spl.mics.application.messages.AttackEvent;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.AfterAll;
-
 import org.junit.jupiter.api.Test;
 
-import java.util.Dictionary;
-import java.util.Hashtable;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicLong;
-
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -54,10 +40,18 @@ public class MessageBusTest {
         };
         Thread t = new Thread(microServiceTest);
         t.start();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         microServiceTest.sendEvent(new TestEvent());
+
+        System.out.println("Wait");
         assertEquals(TestText, future.get());
 
         microServiceTest.terminate();
+        t.interrupt();
     }
 
     @Test
@@ -70,16 +64,22 @@ public class MessageBusTest {
             @Override
             protected void initialize() {
                 subscribeEvent(TestEvent.class, c -> {
-                    complete(new TestEvent(), TestText);
+                    complete(c, TestText);
                 });
             }
         };
         Thread t = new Thread(microServiceTest);
         t.start();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Future<String> future = microServiceTest.sendEvent(new TestEvent());
         assertEquals(TestText, future.get());
 
         microServiceTest.terminate();
+        t.interrupt();
 
     }
 
@@ -102,9 +102,15 @@ public class MessageBusTest {
         };
         Thread t = new Thread(microServiceTest);
         t.start();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         microServiceTest.sendBroadcast(new TestBroadcast());
         assertEquals(TestText, future.get());
         microServiceTest.terminate();
+        t.interrupt();
     }
 
     @Test
@@ -134,13 +140,19 @@ public class MessageBusTest {
         Thread t2 = new Thread(broadcastListener2);
         t1.start();
         t2.start();
-
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         broadcastListener1.sendBroadcast(new TestBroadcast());
         assertEquals(TestText, future1.get());
         assertEquals(TestText2, future2.get());
 
         broadcastListener1.terminate();
         broadcastListener2.terminate();
+        t1.interrupt();
+        t2.interrupt();
     }
 
     //unregister
@@ -167,18 +179,19 @@ public class MessageBusTest {
 
         Thread t = new Thread(microServiceTest);
         t.start();
-
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         microServiceTest.terminate();
 
         EventSender.sendEvent(new TestEvent());
 
-        boolean isExceptionThrowned = false;
-        try {
-            future.get(5, TimeUnit.SECONDS);
-        } catch (Exception e) {
-            isExceptionThrowned = true;
-        }
-        assertTrue(isExceptionThrowned);
+        String result = future.get(5, TimeUnit.SECONDS);
+        assertNull(result);
+
+        EventSender.terminate();
 
 
     }

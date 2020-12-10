@@ -1,0 +1,5010 @@
+[
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5,
+          7
+        ],
+        "duration": 385
+      },
+      {
+        "serials": [
+          5,
+          6
+        ],
+        "duration": 357
+      },
+      {
+        "serials": [
+          5,
+          6
+        ],
+        "duration": 317
+      },
+      {
+        "serials": [
+          4,
+          5,
+          7
+        ],
+        "duration": 258
+      },
+      {
+        "serials": [
+          2,
+          6,
+          7
+        ],
+        "duration": 103
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "duration": 202
+      }
+    ],
+    "R2D2": 218,
+    "Lando": 118,
+    "Ewoks": 7,
+    "testId": 0,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          3,
+          4
+        ],
+        "duration": 176
+      },
+      {
+        "serials": [
+          2,
+          4
+        ],
+        "duration": 152
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3
+        ],
+        "duration": 242
+      }
+    ],
+    "R2D2": 253,
+    "Lando": 207,
+    "Ewoks": 4,
+    "testId": 1,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          8,
+          9,
+          10
+        ],
+        "duration": 352
+      },
+      {
+        "serials": [
+          3,
+          6,
+          8,
+          9,
+          10
+        ],
+        "duration": 144
+      },
+      {
+        "serials": [
+          2,
+          3,
+          5,
+          8,
+          9
+        ],
+        "duration": 225
+      },
+      {
+        "serials": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "duration": 234
+      },
+      {
+        "serials": [
+          3,
+          6,
+          8,
+          9
+        ],
+        "duration": 174
+      },
+      {
+        "serials": [
+          3,
+          6,
+          9
+        ],
+        "duration": 356
+      }
+    ],
+    "R2D2": 281,
+    "Lando": 200,
+    "Ewoks": 10,
+    "testId": 2,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "duration": 202
+      },
+      {
+        "serials": [
+          2,
+          3,
+          7,
+          8
+        ],
+        "duration": 105
+      },
+      {
+        "serials": [
+          2,
+          4
+        ],
+        "duration": 181
+      },
+      {
+        "serials": [
+          1,
+          5,
+          6,
+          9,
+          10
+        ],
+        "duration": 202
+      }
+    ],
+    "R2D2": 192,
+    "Lando": 217,
+    "Ewoks": 10,
+    "testId": 3,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          4
+        ],
+        "duration": 384
+      },
+      {
+        "serials": [
+          3
+        ],
+        "duration": 328
+      },
+      {
+        "serials": [
+          1,
+          2
+        ],
+        "duration": 213
+      }
+    ],
+    "R2D2": 272,
+    "Lando": 238,
+    "Ewoks": 4,
+    "testId": 4,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          7
+        ],
+        "duration": 214
+      },
+      {
+        "serials": [
+          1,
+          4,
+          5,
+          6
+        ],
+        "duration": 127
+      },
+      {
+        "serials": [
+          1,
+          3,
+          6
+        ],
+        "duration": 384
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          7
+        ],
+        "duration": 250
+      },
+      {
+        "serials": [
+          1,
+          6,
+          7
+        ],
+        "duration": 154
+      },
+      {
+        "serials": [
+          1,
+          7
+        ],
+        "duration": 360
+      }
+    ],
+    "R2D2": 115,
+    "Lando": 283,
+    "Ewoks": 7,
+    "testId": 5,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          3
+        ],
+        "duration": 134
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4
+        ],
+        "duration": 291
+      },
+      {
+        "serials": [
+          2,
+          3,
+          5
+        ],
+        "duration": 172
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "duration": 110
+      },
+      {
+        "serials": [
+          3,
+          5
+        ],
+        "duration": 161
+      }
+    ],
+    "R2D2": 170,
+    "Lando": 115,
+    "Ewoks": 5,
+    "testId": 6,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          6,
+          8
+        ],
+        "duration": 222
+      },
+      {
+        "serials": [
+          4,
+          5,
+          7,
+          8
+        ],
+        "duration": 297
+      },
+      {
+        "serials": [
+          3,
+          4,
+          6
+        ],
+        "duration": 116
+      },
+      {
+        "serials": [
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "duration": 393
+      }
+    ],
+    "R2D2": 122,
+    "Lando": 132,
+    "Ewoks": 8,
+    "testId": 7,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          6
+        ],
+        "duration": 322
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3
+        ],
+        "duration": 175
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "duration": 225
+      }
+    ],
+    "R2D2": 157,
+    "Lando": 125,
+    "Ewoks": 6,
+    "testId": 8,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          6,
+          9
+        ],
+        "duration": 228
+      },
+      {
+        "serials": [
+          4,
+          5,
+          7
+        ],
+        "duration": 178
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          6,
+          7
+        ],
+        "duration": 253
+      }
+    ],
+    "R2D2": 144,
+    "Lando": 113,
+    "Ewoks": 10,
+    "testId": 9,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          3,
+          7,
+          8,
+          9
+        ],
+        "duration": 218
+      },
+      {
+        "serials": [
+          1,
+          3,
+          7,
+          8,
+          9
+        ],
+        "duration": 101
+      },
+      {
+        "serials": [
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "duration": 186
+      },
+      {
+        "serials": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "duration": 209
+      },
+      {
+        "serials": [
+          4,
+          5
+        ],
+        "duration": 206
+      }
+    ],
+    "R2D2": 293,
+    "Lando": 220,
+    "Ewoks": 9,
+    "testId": 10,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          3,
+          4
+        ],
+        "duration": 229
+      },
+      {
+        "serials": [
+          1,
+          3
+        ],
+        "duration": 222
+      },
+      {
+        "serials": [
+          1
+        ],
+        "duration": 183
+      }
+    ],
+    "R2D2": 127,
+    "Lando": 224,
+    "Ewoks": 5,
+    "testId": 11,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          6,
+          7,
+          8
+        ],
+        "duration": 365
+      },
+      {
+        "serials": [
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "duration": 182
+      },
+      {
+        "serials": [
+          2,
+          5,
+          6
+        ],
+        "duration": 339
+      }
+    ],
+    "R2D2": 261,
+    "Lando": 236,
+    "Ewoks": 8,
+    "testId": 12,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          3
+        ],
+        "duration": 275
+      },
+      {
+        "serials": [
+          1,
+          3
+        ],
+        "duration": 397
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4
+        ],
+        "duration": 316
+      },
+      {
+        "serials": [
+          2,
+          4
+        ],
+        "duration": 194
+      }
+    ],
+    "R2D2": 214,
+    "Lando": 150,
+    "Ewoks": 4,
+    "testId": 13,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          3,
+          4
+        ],
+        "duration": 392
+      },
+      {
+        "serials": [
+          2,
+          3
+        ],
+        "duration": 337
+      },
+      {
+        "serials": [
+          2,
+          3
+        ],
+        "duration": 239
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "duration": 263
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4
+        ],
+        "duration": 229
+      }
+    ],
+    "R2D2": 269,
+    "Lando": 174,
+    "Ewoks": 5,
+    "testId": 14,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          4,
+          5
+        ],
+        "duration": 261
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "duration": 189
+      },
+      {
+        "serials": [
+          2
+        ],
+        "duration": 251
+      },
+      {
+        "serials": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "duration": 348
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "duration": 275
+      },
+      {
+        "serials": [
+          1,
+          4,
+          5
+        ],
+        "duration": 375
+      },
+      {
+        "serials": [
+          2,
+          5
+        ],
+        "duration": 207
+      }
+    ],
+    "R2D2": 157,
+    "Lando": 105,
+    "Ewoks": 6,
+    "testId": 15,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          4,
+          5,
+          8
+        ],
+        "duration": 182
+      },
+      {
+        "serials": [
+          3,
+          5,
+          6,
+          7
+        ],
+        "duration": 154
+      },
+      {
+        "serials": [
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        "duration": 256
+      },
+      {
+        "serials": [
+          1,
+          2,
+          5
+        ],
+        "duration": 389
+      },
+      {
+        "serials": [
+          3,
+          7,
+          8
+        ],
+        "duration": 330
+      },
+      {
+        "serials": [
+          2,
+          3,
+          7,
+          8
+        ],
+        "duration": 335
+      }
+    ],
+    "R2D2": 260,
+    "Lando": 120,
+    "Ewoks": 8,
+    "testId": 16,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          4,
+          5,
+          8
+        ],
+        "duration": 146
+      },
+      {
+        "serials": [
+          4,
+          7
+        ],
+        "duration": 212
+      },
+      {
+        "serials": [
+          4,
+          5,
+          6
+        ],
+        "duration": 296
+      },
+      {
+        "serials": [
+          1,
+          6,
+          7,
+          8
+        ],
+        "duration": 347
+      }
+    ],
+    "R2D2": 271,
+    "Lando": 201,
+    "Ewoks": 8,
+    "testId": 17,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "duration": 185
+      },
+      {
+        "serials": [
+          1,
+          7
+        ],
+        "duration": 237
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        "duration": 355
+      },
+      {
+        "serials": [
+          5,
+          7
+        ],
+        "duration": 188
+      },
+      {
+        "serials": [
+          1,
+          6
+        ],
+        "duration": 138
+      },
+      {
+        "serials": [
+          4,
+          7
+        ],
+        "duration": 308
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7
+        ],
+        "duration": 202
+      }
+    ],
+    "R2D2": 199,
+    "Lando": 185,
+    "Ewoks": 7,
+    "testId": 18,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          4,
+          5,
+          6,
+          7,
+          9
+        ],
+        "duration": 378
+      },
+      {
+        "serials": [
+          1,
+          3,
+          9
+        ],
+        "duration": 313
+      },
+      {
+        "serials": [
+          2,
+          3,
+          6,
+          8
+        ],
+        "duration": 236
+      },
+      {
+        "serials": [
+          2,
+          4,
+          5,
+          7,
+          8,
+          9
+        ],
+        "duration": 297
+      }
+    ],
+    "R2D2": 116,
+    "Lando": 173,
+    "Ewoks": 9,
+    "testId": 19,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          5
+        ],
+        "duration": 213
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3
+        ],
+        "duration": 178
+      },
+      {
+        "serials": [
+          1
+        ],
+        "duration": 180
+      },
+      {
+        "serials": [
+          1,
+          3
+        ],
+        "duration": 110
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3
+        ],
+        "duration": 274
+      }
+    ],
+    "R2D2": 216,
+    "Lando": 277,
+    "Ewoks": 5,
+    "testId": 20,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          3,
+          4
+        ],
+        "duration": 184
+      },
+      {
+        "serials": [
+          1
+        ],
+        "duration": 120
+      },
+      {
+        "serials": [
+          1,
+          3
+        ],
+        "duration": 139
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "duration": 214
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4
+        ],
+        "duration": 297
+      }
+    ],
+    "R2D2": 269,
+    "Lando": 179,
+    "Ewoks": 4,
+    "testId": 21,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5,
+          8
+        ],
+        "duration": 341
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          6,
+          8
+        ],
+        "duration": 141
+      },
+      {
+        "serials": [
+          4,
+          7
+        ],
+        "duration": 104
+      },
+      {
+        "serials": [
+          2,
+          3,
+          5,
+          6,
+          8
+        ],
+        "duration": 126
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5,
+          8
+        ],
+        "duration": 345
+      }
+    ],
+    "R2D2": 206,
+    "Lando": 109,
+    "Ewoks": 8,
+    "testId": 22,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "duration": 104
+      },
+      {
+        "serials": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "duration": 202
+      },
+      {
+        "serials": [
+          2,
+          4
+        ],
+        "duration": 221
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          6,
+          7
+        ],
+        "duration": 292
+      }
+    ],
+    "R2D2": 218,
+    "Lando": 113,
+    "Ewoks": 7,
+    "testId": 23,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          3
+        ],
+        "duration": 289
+      },
+      {
+        "serials": [
+          1
+        ],
+        "duration": 341
+      },
+      {
+        "serials": [
+          1
+        ],
+        "duration": 294
+      },
+      {
+        "serials": [
+          2,
+          4
+        ],
+        "duration": 310
+      },
+      {
+        "serials": [
+          2,
+          4
+        ],
+        "duration": 374
+      }
+    ],
+    "R2D2": 220,
+    "Lando": 286,
+    "Ewoks": 4,
+    "testId": 24,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          3,
+          6
+        ],
+        "duration": 337
+      },
+      {
+        "serials": [
+          1,
+          3,
+          6,
+          7
+        ],
+        "duration": 138
+      },
+      {
+        "serials": [
+          1,
+          3
+        ],
+        "duration": 364
+      },
+      {
+        "serials": [
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "duration": 334
+      },
+      {
+        "serials": [
+          1,
+          2,
+          5,
+          7
+        ],
+        "duration": 227
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          6,
+          7
+        ],
+        "duration": 111
+      }
+    ],
+    "R2D2": 117,
+    "Lando": 148,
+    "Ewoks": 7,
+    "testId": 25,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "duration": 289
+      },
+      {
+        "serials": [
+          1,
+          5
+        ],
+        "duration": 240
+      },
+      {
+        "serials": [
+          1,
+          3
+        ],
+        "duration": 180
+      }
+    ],
+    "R2D2": 118,
+    "Lando": 251,
+    "Ewoks": 5,
+    "testId": 26,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          4
+        ],
+        "duration": 117
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4
+        ],
+        "duration": 387
+      },
+      {
+        "serials": [
+          3,
+          4
+        ],
+        "duration": 383
+      }
+    ],
+    "R2D2": 281,
+    "Lando": 228,
+    "Ewoks": 4,
+    "testId": 27,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1
+        ],
+        "duration": 200
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "duration": 260
+      },
+      {
+        "serials": [
+          1,
+          4,
+          7
+        ],
+        "duration": 236
+      }
+    ],
+    "R2D2": 166,
+    "Lando": 186,
+    "Ewoks": 7,
+    "testId": 28,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          6,
+          10
+        ],
+        "duration": 255
+      },
+      {
+        "serials": [
+          6,
+          7,
+          9,
+          10
+        ],
+        "duration": 256
+      },
+      {
+        "serials": [
+          4,
+          6,
+          9
+        ],
+        "duration": 322
+      },
+      {
+        "serials": [
+          1,
+          3,
+          5,
+          6,
+          9
+        ],
+        "duration": 217
+      },
+      {
+        "serials": [
+          1,
+          2,
+          10
+        ],
+        "duration": 246
+      },
+      {
+        "serials": [
+          3,
+          8
+        ],
+        "duration": 327
+      },
+      {
+        "serials": [
+          1,
+          5,
+          6,
+          8,
+          9
+        ],
+        "duration": 376
+      }
+    ],
+    "R2D2": 125,
+    "Lando": 181,
+    "Ewoks": 10,
+    "testId": 29,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          3,
+          4,
+          6,
+          8
+        ],
+        "duration": 256
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          8,
+          9
+        ],
+        "duration": 144
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9
+        ],
+        "duration": 129
+      },
+      {
+        "serials": [
+          7,
+          9
+        ],
+        "duration": 226
+      }
+    ],
+    "R2D2": 297,
+    "Lando": 251,
+    "Ewoks": 9,
+    "testId": 30,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "duration": 377
+      },
+      {
+        "serials": [
+          3
+        ],
+        "duration": 387
+      },
+      {
+        "serials": [
+          2,
+          5,
+          6,
+          8
+        ],
+        "duration": 157
+      },
+      {
+        "serials": [
+          4,
+          5,
+          6,
+          7,
+          10
+        ],
+        "duration": 339
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          9
+        ],
+        "duration": 337
+      },
+      {
+        "serials": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "duration": 262
+      },
+      {
+        "serials": [
+          1,
+          2,
+          5,
+          6
+        ],
+        "duration": 186
+      }
+    ],
+    "R2D2": 140,
+    "Lando": 249,
+    "Ewoks": 10,
+    "testId": 31,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        "duration": 329
+      },
+      {
+        "serials": [
+          1,
+          3
+        ],
+        "duration": 262
+      },
+      {
+        "serials": [
+          2,
+          3,
+          6
+        ],
+        "duration": 221
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4
+        ],
+        "duration": 162
+      },
+      {
+        "serials": [
+          3,
+          4
+        ],
+        "duration": 302
+      },
+      {
+        "serials": [
+          1,
+          3,
+          6
+        ],
+        "duration": 235
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4
+        ],
+        "duration": 219
+      }
+    ],
+    "R2D2": 291,
+    "Lando": 137,
+    "Ewoks": 6,
+    "testId": 32,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          6
+        ],
+        "duration": 184
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "duration": 117
+      },
+      {
+        "serials": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        "duration": 109
+      },
+      {
+        "serials": [
+          2,
+          4,
+          5,
+          6,
+          8
+        ],
+        "duration": 209
+      },
+      {
+        "serials": [
+          3
+        ],
+        "duration": 154
+      }
+    ],
+    "R2D2": 149,
+    "Lando": 271,
+    "Ewoks": 8,
+    "testId": 33,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          3,
+          4
+        ],
+        "duration": 166
+      },
+      {
+        "serials": [
+          1
+        ],
+        "duration": 312
+      },
+      {
+        "serials": [
+          1
+        ],
+        "duration": 343
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "duration": 343
+      }
+    ],
+    "R2D2": 273,
+    "Lando": 113,
+    "Ewoks": 4,
+    "testId": 34,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          5
+        ],
+        "duration": 132
+      },
+      {
+        "serials": [
+          5
+        ],
+        "duration": 156
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "duration": 329
+      },
+      {
+        "serials": [
+          1,
+          2,
+          5
+        ],
+        "duration": 333
+      },
+      {
+        "serials": [
+          1,
+          2
+        ],
+        "duration": 214
+      }
+    ],
+    "R2D2": 296,
+    "Lando": 138,
+    "Ewoks": 5,
+    "testId": 35,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "duration": 262
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "duration": 255
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          6
+        ],
+        "duration": 287
+      },
+      {
+        "serials": [
+          2,
+          5
+        ],
+        "duration": 353
+      }
+    ],
+    "R2D2": 107,
+    "Lando": 161,
+    "Ewoks": 6,
+    "testId": 36,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          3,
+          6
+        ],
+        "duration": 177
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        "duration": 205
+      },
+      {
+        "serials": [
+          3,
+          5,
+          6
+        ],
+        "duration": 241
+      },
+      {
+        "serials": [
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "duration": 212
+      }
+    ],
+    "R2D2": 134,
+    "Lando": 219,
+    "Ewoks": 10,
+    "testId": 37,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          7,
+          9,
+          10
+        ],
+        "duration": 112
+      },
+      {
+        "serials": [
+          2,
+          3,
+          6,
+          9,
+          10
+        ],
+        "duration": 353
+      },
+      {
+        "serials": [
+          1,
+          2,
+          10
+        ],
+        "duration": 162
+      }
+    ],
+    "R2D2": 130,
+    "Lando": 161,
+    "Ewoks": 10,
+    "testId": 38,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          3,
+          5
+        ],
+        "duration": 120
+      },
+      {
+        "serials": [
+          1,
+          5,
+          6
+        ],
+        "duration": 398
+      },
+      {
+        "serials": [
+          3,
+          6,
+          7
+        ],
+        "duration": 121
+      },
+      {
+        "serials": [
+          4,
+          7
+        ],
+        "duration": 164
+      }
+    ],
+    "R2D2": 243,
+    "Lando": 296,
+    "Ewoks": 7,
+    "testId": 39,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          5,
+          7
+        ],
+        "duration": 331
+      },
+      {
+        "serials": [
+          3,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "duration": 114
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "duration": 139
+      },
+      {
+        "serials": [
+          1,
+          2,
+          5,
+          6,
+          9,
+          10
+        ],
+        "duration": 292
+      },
+      {
+        "serials": [
+          1,
+          4,
+          5,
+          9,
+          10
+        ],
+        "duration": 174
+      }
+    ],
+    "R2D2": 285,
+    "Lando": 291,
+    "Ewoks": 10,
+    "testId": 40,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          6,
+          9
+        ],
+        "duration": 185
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          9
+        ],
+        "duration": 150
+      },
+      {
+        "serials": [
+          2,
+          4,
+          6
+        ],
+        "duration": 162
+      },
+      {
+        "serials": [
+          1,
+          3,
+          7,
+          8,
+          9
+        ],
+        "duration": 245
+      }
+    ],
+    "R2D2": 213,
+    "Lando": 142,
+    "Ewoks": 9,
+    "testId": 41,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          3
+        ],
+        "duration": 330
+      },
+      {
+        "serials": [
+          1
+        ],
+        "duration": 147
+      },
+      {
+        "serials": [
+          4
+        ],
+        "duration": 316
+      },
+      {
+        "serials": [
+          1,
+          3,
+          5
+        ],
+        "duration": 395
+      },
+      {
+        "serials": [
+          3,
+          5
+        ],
+        "duration": 102
+      },
+      {
+        "serials": [
+          1
+        ],
+        "duration": 185
+      }
+    ],
+    "R2D2": 290,
+    "Lando": 240,
+    "Ewoks": 5,
+    "testId": 42,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          10
+        ],
+        "duration": 200
+      },
+      {
+        "serials": [
+          3,
+          5
+        ],
+        "duration": 285
+      },
+      {
+        "serials": [
+          6,
+          7,
+          8
+        ],
+        "duration": 385
+      }
+    ],
+    "R2D2": 206,
+    "Lando": 180,
+    "Ewoks": 10,
+    "testId": 43,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          3
+        ],
+        "duration": 319
+      },
+      {
+        "serials": [
+          1,
+          3
+        ],
+        "duration": 371
+      },
+      {
+        "serials": [
+          1,
+          3,
+          5
+        ],
+        "duration": 332
+      },
+      {
+        "serials": [
+          1,
+          2,
+          5
+        ],
+        "duration": 113
+      },
+      {
+        "serials": [
+          3,
+          4,
+          5
+        ],
+        "duration": 335
+      },
+      {
+        "serials": [
+          3,
+          4,
+          5
+        ],
+        "duration": 111
+      },
+      {
+        "serials": [
+          4,
+          5
+        ],
+        "duration": 230
+      }
+    ],
+    "R2D2": 274,
+    "Lando": 254,
+    "Ewoks": 5,
+    "testId": 44,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          3,
+          6
+        ],
+        "duration": 387
+      },
+      {
+        "serials": [
+          2,
+          3,
+          6
+        ],
+        "duration": 195
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "duration": 291
+      }
+    ],
+    "R2D2": 142,
+    "Lando": 133,
+    "Ewoks": 6,
+    "testId": 45,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          5,
+          7,
+          8
+        ],
+        "duration": 158
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          9
+        ],
+        "duration": 205
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          7,
+          9
+        ],
+        "duration": 273
+      },
+      {
+        "serials": [
+          3,
+          6,
+          7,
+          8
+        ],
+        "duration": 181
+      },
+      {
+        "serials": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        "duration": 124
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5,
+          8,
+          9
+        ],
+        "duration": 177
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          7,
+          8
+        ],
+        "duration": 325
+      }
+    ],
+    "R2D2": 297,
+    "Lando": 155,
+    "Ewoks": 9,
+    "testId": 46,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2
+        ],
+        "duration": 301
+      },
+      {
+        "serials": [
+          2,
+          6,
+          7
+        ],
+        "duration": 218
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "duration": 120
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "duration": 322
+      },
+      {
+        "serials": [
+          3,
+          5,
+          7
+        ],
+        "duration": 344
+      },
+      {
+        "serials": [
+          1,
+          2,
+          5,
+          7
+        ],
+        "duration": 166
+      }
+    ],
+    "R2D2": 270,
+    "Lando": 154,
+    "Ewoks": 7,
+    "testId": 47,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          5
+        ],
+        "duration": 249
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4
+        ],
+        "duration": 236
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4
+        ],
+        "duration": 215
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3
+        ],
+        "duration": 114
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "duration": 367
+      },
+      {
+        "serials": [
+          1,
+          4,
+          5
+        ],
+        "duration": 277
+      }
+    ],
+    "R2D2": 189,
+    "Lando": 193,
+    "Ewoks": 5,
+    "testId": 48,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "duration": 114
+      },
+      {
+        "serials": [
+          1,
+          5,
+          7,
+          8,
+          9
+        ],
+        "duration": 327
+      },
+      {
+        "serials": [
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "duration": 396
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          9
+        ],
+        "duration": 368
+      },
+      {
+        "serials": [
+          1,
+          2,
+          9,
+          10
+        ],
+        "duration": 120
+      },
+      {
+        "serials": [
+          4,
+          7,
+          9
+        ],
+        "duration": 230
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          5,
+          8,
+          9,
+          10
+        ],
+        "duration": 369
+      }
+    ],
+    "R2D2": 111,
+    "Lando": 217,
+    "Ewoks": 10,
+    "testId": 49,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          8
+        ],
+        "duration": 218
+      },
+      {
+        "serials": [
+          1,
+          2,
+          6,
+          8,
+          9,
+          10
+        ],
+        "duration": 248
+      },
+      {
+        "serials": [
+          1,
+          2,
+          5,
+          6,
+          9,
+          10
+        ],
+        "duration": 178
+      },
+      {
+        "serials": [
+          3,
+          6,
+          8,
+          9
+        ],
+        "duration": 284
+      },
+      {
+        "serials": [
+          3,
+          5,
+          6,
+          8
+        ],
+        "duration": 222
+      }
+    ],
+    "R2D2": 116,
+    "Lando": 116,
+    "Ewoks": 10,
+    "testId": 50,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          7,
+          8,
+          9
+        ],
+        "duration": 220
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          7
+        ],
+        "duration": 297
+      },
+      {
+        "serials": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "duration": 159
+      },
+      {
+        "serials": [
+          4,
+          5,
+          7,
+          8
+        ],
+        "duration": 310
+      },
+      {
+        "serials": [
+          1,
+          7,
+          8
+        ],
+        "duration": 286
+      },
+      {
+        "serials": [
+          5,
+          7,
+          8
+        ],
+        "duration": 315
+      }
+    ],
+    "R2D2": 151,
+    "Lando": 271,
+    "Ewoks": 9,
+    "testId": 51,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          3,
+          8,
+          9
+        ],
+        "duration": 317
+      },
+      {
+        "serials": [
+          4,
+          5,
+          8,
+          9
+        ],
+        "duration": 291
+      },
+      {
+        "serials": [
+          1,
+          2,
+          6,
+          8,
+          9
+        ],
+        "duration": 235
+      },
+      {
+        "serials": [
+          1,
+          3,
+          5,
+          6,
+          8
+        ],
+        "duration": 312
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          6
+        ],
+        "duration": 329
+      },
+      {
+        "serials": [
+          2,
+          8,
+          9
+        ],
+        "duration": 122
+      }
+    ],
+    "R2D2": 236,
+    "Lando": 281,
+    "Ewoks": 9,
+    "testId": 52,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          3
+        ],
+        "duration": 172
+      },
+      {
+        "serials": [
+          3,
+          4
+        ],
+        "duration": 345
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4
+        ],
+        "duration": 253
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "duration": 214
+      },
+      {
+        "serials": [
+          2,
+          4,
+          5
+        ],
+        "duration": 211
+      }
+    ],
+    "R2D2": 199,
+    "Lando": 170,
+    "Ewoks": 5,
+    "testId": 53,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "duration": 278
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "duration": 325
+      },
+      {
+        "serials": [
+          2,
+          5
+        ],
+        "duration": 393
+      }
+    ],
+    "R2D2": 161,
+    "Lando": 297,
+    "Ewoks": 5,
+    "testId": 54,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          6
+        ],
+        "duration": 181
+      },
+      {
+        "serials": [
+          3,
+          5,
+          8
+        ],
+        "duration": 223
+      },
+      {
+        "serials": [
+          3,
+          5,
+          6
+        ],
+        "duration": 376
+      },
+      {
+        "serials": [
+          1,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "duration": 389
+      }
+    ],
+    "R2D2": 280,
+    "Lando": 265,
+    "Ewoks": 8,
+    "testId": 55,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          4
+        ],
+        "duration": 250
+      },
+      {
+        "serials": [
+          2,
+          3
+        ],
+        "duration": 351
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4
+        ],
+        "duration": 376
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "duration": 171
+      }
+    ],
+    "R2D2": 298,
+    "Lando": 179,
+    "Ewoks": 4,
+    "testId": 56,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          9
+        ],
+        "duration": 310
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5,
+          7,
+          9
+        ],
+        "duration": 156
+      },
+      {
+        "serials": [
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "duration": 394
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          6,
+          8,
+          9
+        ],
+        "duration": 239
+      },
+      {
+        "serials": [
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "duration": 105
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "duration": 385
+      }
+    ],
+    "R2D2": 111,
+    "Lando": 171,
+    "Ewoks": 10,
+    "testId": 57,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          3,
+          4,
+          6,
+          7,
+          10
+        ],
+        "duration": 265
+      },
+      {
+        "serials": [
+          2,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "duration": 156
+      },
+      {
+        "serials": [
+          2,
+          6,
+          8,
+          9,
+          10
+        ],
+        "duration": 367
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          6,
+          7,
+          10
+        ],
+        "duration": 301
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "duration": 139
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          10
+        ],
+        "duration": 128
+      },
+      {
+        "serials": [
+          5,
+          6,
+          10
+        ],
+        "duration": 191
+      }
+    ],
+    "R2D2": 289,
+    "Lando": 138,
+    "Ewoks": 10,
+    "testId": 58,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          5,
+          6,
+          7,
+          10
+        ],
+        "duration": 336
+      },
+      {
+        "serials": [
+          2,
+          4,
+          6,
+          9
+        ],
+        "duration": 115
+      },
+      {
+        "serials": [
+          2,
+          3,
+          5,
+          6,
+          10
+        ],
+        "duration": 208
+      },
+      {
+        "serials": [
+          1,
+          2,
+          6,
+          7,
+          9,
+          10
+        ],
+        "duration": 352
+      },
+      {
+        "serials": [
+          4,
+          5,
+          6,
+          8
+        ],
+        "duration": 159
+      }
+    ],
+    "R2D2": 141,
+    "Lando": 153,
+    "Ewoks": 10,
+    "testId": 59,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          4
+        ],
+        "duration": 327
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "duration": 303
+      },
+      {
+        "serials": [
+          3
+        ],
+        "duration": 154
+      },
+      {
+        "serials": [
+          2
+        ],
+        "duration": 141
+      },
+      {
+        "serials": [
+          2
+        ],
+        "duration": 151
+      },
+      {
+        "serials": [
+          1
+        ],
+        "duration": 284
+      }
+    ],
+    "R2D2": 160,
+    "Lando": 240,
+    "Ewoks": 4,
+    "testId": 60,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          3
+        ],
+        "duration": 379
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "duration": 108
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4
+        ],
+        "duration": 186
+      },
+      {
+        "serials": [
+          4,
+          5,
+          6
+        ],
+        "duration": 389
+      }
+    ],
+    "R2D2": 216,
+    "Lando": 147,
+    "Ewoks": 6,
+    "testId": 61,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1
+        ],
+        "duration": 280
+      },
+      {
+        "serials": [
+          1,
+          5
+        ],
+        "duration": 267
+      },
+      {
+        "serials": [
+          1,
+          2,
+          5,
+          6
+        ],
+        "duration": 273
+      },
+      {
+        "serials": [
+          2
+        ],
+        "duration": 156
+      },
+      {
+        "serials": [
+          1,
+          3,
+          5
+        ],
+        "duration": 229
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "duration": 104
+      }
+    ],
+    "R2D2": 294,
+    "Lando": 102,
+    "Ewoks": 6,
+    "testId": 62,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          3,
+          7
+        ],
+        "duration": 264
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "duration": 112
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          6
+        ],
+        "duration": 119
+      },
+      {
+        "serials": [
+          3,
+          7
+        ],
+        "duration": 310
+      },
+      {
+        "serials": [
+          4,
+          5,
+          7
+        ],
+        "duration": 135
+      },
+      {
+        "serials": [
+          2,
+          7
+        ],
+        "duration": 283
+      },
+      {
+        "serials": [
+          2,
+          6
+        ],
+        "duration": 118
+      }
+    ],
+    "R2D2": 196,
+    "Lando": 228,
+    "Ewoks": 7,
+    "testId": 63,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          4,
+          5
+        ],
+        "duration": 364
+      },
+      {
+        "serials": [
+          2
+        ],
+        "duration": 132
+      },
+      {
+        "serials": [
+          1,
+          4,
+          5
+        ],
+        "duration": 307
+      },
+      {
+        "serials": [
+          3
+        ],
+        "duration": 348
+      },
+      {
+        "serials": [
+          1,
+          3,
+          5
+        ],
+        "duration": 264
+      }
+    ],
+    "R2D2": 226,
+    "Lando": 157,
+    "Ewoks": 5,
+    "testId": 64,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          3,
+          7,
+          9
+        ],
+        "duration": 117
+      },
+      {
+        "serials": [
+          1,
+          3,
+          5,
+          8
+        ],
+        "duration": 372
+      },
+      {
+        "serials": [
+          2,
+          4,
+          5,
+          9
+        ],
+        "duration": 205
+      },
+      {
+        "serials": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "duration": 342
+      },
+      {
+        "serials": [
+          1,
+          6,
+          7
+        ],
+        "duration": 177
+      },
+      {
+        "serials": [
+          1,
+          9
+        ],
+        "duration": 123
+      }
+    ],
+    "R2D2": 269,
+    "Lando": 100,
+    "Ewoks": 9,
+    "testId": 65,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          3,
+          5,
+          6,
+          7
+        ],
+        "duration": 233
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "duration": 224
+      },
+      {
+        "serials": [
+          3,
+          4,
+          6
+        ],
+        "duration": 235
+      },
+      {
+        "serials": [
+          2,
+          4,
+          6,
+          7
+        ],
+        "duration": 313
+      },
+      {
+        "serials": [
+          4,
+          6
+        ],
+        "duration": 241
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "duration": 160
+      },
+      {
+        "serials": [
+          3,
+          4,
+          7
+        ],
+        "duration": 257
+      }
+    ],
+    "R2D2": 130,
+    "Lando": 223,
+    "Ewoks": 7,
+    "testId": 66,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          3,
+          9
+        ],
+        "duration": 113
+      },
+      {
+        "serials": [
+          1,
+          6,
+          8,
+          9
+        ],
+        "duration": 139
+      },
+      {
+        "serials": [
+          3
+        ],
+        "duration": 396
+      },
+      {
+        "serials": [
+          4,
+          5,
+          6,
+          8
+        ],
+        "duration": 316
+      },
+      {
+        "serials": [
+          4,
+          5,
+          6,
+          8,
+          9
+        ],
+        "duration": 211
+      }
+    ],
+    "R2D2": 217,
+    "Lando": 153,
+    "Ewoks": 9,
+    "testId": 67,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          4
+        ],
+        "duration": 383
+      },
+      {
+        "serials": [
+          2
+        ],
+        "duration": 163
+      },
+      {
+        "serials": [
+          1,
+          4,
+          5,
+          6
+        ],
+        "duration": 296
+      }
+    ],
+    "R2D2": 230,
+    "Lando": 199,
+    "Ewoks": 6,
+    "testId": 68,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          4,
+          5
+        ],
+        "duration": 315
+      },
+      {
+        "serials": [
+          2,
+          3,
+          7
+        ],
+        "duration": 381
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          8,
+          9
+        ],
+        "duration": 196
+      },
+      {
+        "serials": [
+          1,
+          2,
+          6,
+          8,
+          9
+        ],
+        "duration": 266
+      }
+    ],
+    "R2D2": 216,
+    "Lando": 274,
+    "Ewoks": 9,
+    "testId": 69,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1
+        ],
+        "duration": 156
+      },
+      {
+        "serials": [
+          1,
+          4,
+          5
+        ],
+        "duration": 310
+      },
+      {
+        "serials": [
+          1
+        ],
+        "duration": 277
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "duration": 265
+      }
+    ],
+    "R2D2": 209,
+    "Lando": 267,
+    "Ewoks": 5,
+    "testId": 70,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "duration": 236
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "duration": 309
+      },
+      {
+        "serials": [
+          3,
+          4,
+          6,
+          7
+        ],
+        "duration": 221
+      }
+    ],
+    "R2D2": 140,
+    "Lando": 200,
+    "Ewoks": 7,
+    "testId": 71,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          8
+        ],
+        "duration": 318
+      },
+      {
+        "serials": [
+          2,
+          4,
+          5,
+          9
+        ],
+        "duration": 114
+      },
+      {
+        "serials": [
+          1,
+          4,
+          5,
+          8,
+          10
+        ],
+        "duration": 119
+      },
+      {
+        "serials": [
+          2,
+          7
+        ],
+        "duration": 110
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          8,
+          10
+        ],
+        "duration": 185
+      },
+      {
+        "serials": [
+          4,
+          6,
+          9,
+          10
+        ],
+        "duration": 281
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9
+        ],
+        "duration": 283
+      }
+    ],
+    "R2D2": 215,
+    "Lando": 232,
+    "Ewoks": 10,
+    "testId": 72,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "duration": 112
+      },
+      {
+        "serials": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "duration": 271
+      },
+      {
+        "serials": [
+          1,
+          2,
+          7
+        ],
+        "duration": 202
+      }
+    ],
+    "R2D2": 217,
+    "Lando": 135,
+    "Ewoks": 7,
+    "testId": 73,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1
+        ],
+        "duration": 254
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3
+        ],
+        "duration": 154
+      },
+      {
+        "serials": [
+          1
+        ],
+        "duration": 321
+      }
+    ],
+    "R2D2": 238,
+    "Lando": 187,
+    "Ewoks": 4,
+    "testId": 74,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "duration": 254
+      },
+      {
+        "serials": [
+          3,
+          4,
+          6
+        ],
+        "duration": 285
+      },
+      {
+        "serials": [
+          3,
+          5,
+          6
+        ],
+        "duration": 230
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "duration": 345
+      }
+    ],
+    "R2D2": 182,
+    "Lando": 195,
+    "Ewoks": 8,
+    "testId": 75,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          4
+        ],
+        "duration": 170
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "duration": 183
+      },
+      {
+        "serials": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "duration": 335
+      }
+    ],
+    "R2D2": 244,
+    "Lando": 150,
+    "Ewoks": 7,
+    "testId": 76,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          4
+        ],
+        "duration": 147
+      },
+      {
+        "serials": [
+          5
+        ],
+        "duration": 294
+      },
+      {
+        "serials": [
+          3
+        ],
+        "duration": 239
+      },
+      {
+        "serials": [
+          3,
+          4,
+          5
+        ],
+        "duration": 305
+      }
+    ],
+    "R2D2": 267,
+    "Lando": 290,
+    "Ewoks": 5,
+    "testId": 77,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          9
+        ],
+        "duration": 275
+      },
+      {
+        "serials": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "duration": 136
+      },
+      {
+        "serials": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "duration": 121
+      },
+      {
+        "serials": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        "duration": 125
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          9
+        ],
+        "duration": 118
+      }
+    ],
+    "R2D2": 237,
+    "Lando": 136,
+    "Ewoks": 9,
+    "testId": 78,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          3,
+          5,
+          8,
+          9
+        ],
+        "duration": 398
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "duration": 391
+      },
+      {
+        "serials": [
+          1,
+          4,
+          6,
+          7
+        ],
+        "duration": 106
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5,
+          7,
+          9
+        ],
+        "duration": 260
+      },
+      {
+        "serials": [
+          3,
+          4,
+          7
+        ],
+        "duration": 160
+      }
+    ],
+    "R2D2": 110,
+    "Lando": 129,
+    "Ewoks": 9,
+    "testId": 79,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          5,
+          8
+        ],
+        "duration": 299
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          7,
+          8
+        ],
+        "duration": 298
+      },
+      {
+        "serials": [
+          3,
+          6
+        ],
+        "duration": 181
+      },
+      {
+        "serials": [
+          2,
+          8
+        ],
+        "duration": 208
+      }
+    ],
+    "R2D2": 247,
+    "Lando": 224,
+    "Ewoks": 8,
+    "testId": 80,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9
+        ],
+        "duration": 268
+      },
+      {
+        "serials": [
+          2,
+          6,
+          9
+        ],
+        "duration": 298
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "duration": 108
+      }
+    ],
+    "R2D2": 100,
+    "Lando": 252,
+    "Ewoks": 10,
+    "testId": 81,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          5
+        ],
+        "duration": 206
+      },
+      {
+        "serials": [
+          1,
+          2,
+          5
+        ],
+        "duration": 125
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4
+        ],
+        "duration": 117
+      },
+      {
+        "serials": [
+          3,
+          4
+        ],
+        "duration": 309
+      },
+      {
+        "serials": [
+          3
+        ],
+        "duration": 184
+      }
+    ],
+    "R2D2": 115,
+    "Lando": 230,
+    "Ewoks": 5,
+    "testId": 82,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          3,
+          4,
+          6,
+          8,
+          9
+        ],
+        "duration": 327
+      },
+      {
+        "serials": [
+          2,
+          5,
+          6,
+          7
+        ],
+        "duration": 182
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          6,
+          7,
+          9
+        ],
+        "duration": 346
+      }
+    ],
+    "R2D2": 131,
+    "Lando": 195,
+    "Ewoks": 9,
+    "testId": 83,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          4,
+          5
+        ],
+        "duration": 174
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4
+        ],
+        "duration": 344
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3
+        ],
+        "duration": 223
+      },
+      {
+        "serials": [
+          2,
+          4,
+          5
+        ],
+        "duration": 397
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4
+        ],
+        "duration": 272
+      }
+    ],
+    "R2D2": 144,
+    "Lando": 108,
+    "Ewoks": 5,
+    "testId": 84,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "duration": 290
+      },
+      {
+        "serials": [
+          3,
+          5
+        ],
+        "duration": 180
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "duration": 132
+      }
+    ],
+    "R2D2": 223,
+    "Lando": 144,
+    "Ewoks": 6,
+    "testId": 85,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "duration": 156
+      },
+      {
+        "serials": [
+          2,
+          8,
+          9
+        ],
+        "duration": 383
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          9,
+          10
+        ],
+        "duration": 339
+      },
+      {
+        "serials": [
+          2,
+          7,
+          8,
+          9
+        ],
+        "duration": 253
+      },
+      {
+        "serials": [
+          2,
+          4,
+          6,
+          9,
+          10
+        ],
+        "duration": 165
+      }
+    ],
+    "R2D2": 193,
+    "Lando": 160,
+    "Ewoks": 10,
+    "testId": 86,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "duration": 266
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4
+        ],
+        "duration": 165
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "duration": 269
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4
+        ],
+        "duration": 303
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "duration": 161
+      }
+    ],
+    "R2D2": 298,
+    "Lando": 162,
+    "Ewoks": 4,
+    "testId": 87,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          3
+        ],
+        "duration": 318
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "duration": 374
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4
+        ],
+        "duration": 105
+      },
+      {
+        "serials": [
+          2,
+          4
+        ],
+        "duration": 196
+      },
+      {
+        "serials": [
+          1,
+          2,
+          5
+        ],
+        "duration": 232
+      },
+      {
+        "serials": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "duration": 222
+      }
+    ],
+    "R2D2": 184,
+    "Lando": 221,
+    "Ewoks": 5,
+    "testId": 88,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          3
+        ],
+        "duration": 155
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "duration": 378
+      },
+      {
+        "serials": [
+          3,
+          5,
+          7,
+          8,
+          9
+        ],
+        "duration": 157
+      },
+      {
+        "serials": [
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "duration": 346
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "duration": 279
+      },
+      {
+        "serials": [
+          1,
+          3
+        ],
+        "duration": 392
+      }
+    ],
+    "R2D2": 228,
+    "Lando": 201,
+    "Ewoks": 9,
+    "testId": 89,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          3,
+          5
+        ],
+        "duration": 142
+      },
+      {
+        "serials": [
+          2,
+          4,
+          5
+        ],
+        "duration": 266
+      },
+      {
+        "serials": [
+          1
+        ],
+        "duration": 222
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "duration": 339
+      },
+      {
+        "serials": [
+          1,
+          2,
+          5
+        ],
+        "duration": 257
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4
+        ],
+        "duration": 256
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "duration": 164
+      }
+    ],
+    "R2D2": 230,
+    "Lando": 167,
+    "Ewoks": 5,
+    "testId": 90,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          5
+        ],
+        "duration": 132
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "duration": 302
+      },
+      {
+        "serials": [
+          1,
+          4
+        ],
+        "duration": 382
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "duration": 274
+      },
+      {
+        "serials": [
+          1,
+          3,
+          5
+        ],
+        "duration": 212
+      },
+      {
+        "serials": [
+          1,
+          5
+        ],
+        "duration": 337
+      }
+    ],
+    "R2D2": 113,
+    "Lando": 172,
+    "Ewoks": 5,
+    "testId": 91,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          4,
+          5
+        ],
+        "duration": 218
+      },
+      {
+        "serials": [
+          3,
+          5
+        ],
+        "duration": 187
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4
+        ],
+        "duration": 253
+      },
+      {
+        "serials": [
+          5
+        ],
+        "duration": 386
+      }
+    ],
+    "R2D2": 165,
+    "Lando": 280,
+    "Ewoks": 5,
+    "testId": 92,
+    "numOfAttacks": 4
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "duration": 224
+      },
+      {
+        "serials": [
+          1,
+          6,
+          7
+        ],
+        "duration": 232
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          6,
+          7
+        ],
+        "duration": 188
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          7
+        ],
+        "duration": 331
+      },
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "duration": 358
+      }
+    ],
+    "R2D2": 291,
+    "Lando": 262,
+    "Ewoks": 7,
+    "testId": 93,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          8
+        ],
+        "duration": 224
+      },
+      {
+        "serials": [
+          1,
+          4
+        ],
+        "duration": 361
+      },
+      {
+        "serials": [
+          1,
+          4,
+          5,
+          6,
+          7,
+          9
+        ],
+        "duration": 310
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          7,
+          9
+        ],
+        "duration": 111
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          8
+        ],
+        "duration": 159
+      },
+      {
+        "serials": [
+          1,
+          9
+        ],
+        "duration": 226
+      },
+      {
+        "serials": [
+          1,
+          4,
+          5,
+          9
+        ],
+        "duration": 124
+      }
+    ],
+    "R2D2": 295,
+    "Lando": 293,
+    "Ewoks": 9,
+    "testId": 94,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "duration": 261
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4
+        ],
+        "duration": 287
+      },
+      {
+        "serials": [
+          3,
+          5
+        ],
+        "duration": 213
+      },
+      {
+        "serials": [
+          4
+        ],
+        "duration": 252
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3
+        ],
+        "duration": 150
+      },
+      {
+        "serials": [
+          3,
+          4,
+          5
+        ],
+        "duration": 161
+      }
+    ],
+    "R2D2": 186,
+    "Lando": 232,
+    "Ewoks": 5,
+    "testId": 95,
+    "numOfAttacks": 6
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          5
+        ],
+        "duration": 389
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4
+        ],
+        "duration": 279
+      },
+      {
+        "serials": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "duration": 297
+      },
+      {
+        "serials": [
+          1,
+          2,
+          5
+        ],
+        "duration": 325
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "duration": 207
+      }
+    ],
+    "R2D2": 295,
+    "Lando": 181,
+    "Ewoks": 5,
+    "testId": 96,
+    "numOfAttacks": 5
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          1
+        ],
+        "duration": 392
+      },
+      {
+        "serials": [
+          1,
+          2
+        ],
+        "duration": 338
+      },
+      {
+        "serials": [
+          3,
+          4
+        ],
+        "duration": 399
+      }
+    ],
+    "R2D2": 223,
+    "Lando": 251,
+    "Ewoks": 5,
+    "testId": 97,
+    "numOfAttacks": 3
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          3,
+          5
+        ],
+        "duration": 348
+      },
+      {
+        "serials": [
+          3,
+          7
+        ],
+        "duration": 332
+      },
+      {
+        "serials": [
+          4,
+          7
+        ],
+        "duration": 308
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          7
+        ],
+        "duration": 149
+      },
+      {
+        "serials": [
+          4,
+          6
+        ],
+        "duration": 295
+      },
+      {
+        "serials": [
+          2,
+          4,
+          5
+        ],
+        "duration": 123
+      },
+      {
+        "serials": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "duration": 332
+      }
+    ],
+    "R2D2": 138,
+    "Lando": 153,
+    "Ewoks": 7,
+    "testId": 98,
+    "numOfAttacks": 7
+  },
+  {
+    "attacks": [
+      {
+        "serials": [
+          3,
+          4,
+          5
+        ],
+        "duration": 195
+      },
+      {
+        "serials": [
+          1,
+          5,
+          6
+        ],
+        "duration": 246
+      },
+      {
+        "serials": [
+          3,
+          4,
+          6
+        ],
+        "duration": 391
+      }
+    ],
+    "R2D2": 271,
+    "Lando": 201,
+    "Ewoks": 6,
+    "testId": 99,
+    "numOfAttacks": 3
+  }
+]

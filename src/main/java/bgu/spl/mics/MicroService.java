@@ -148,7 +148,7 @@ public abstract class MicroService implements Runnable {
      * message.
      */
     protected final void terminate() {
-        System.out.println(name + " Terminates at " + new Date());
+//        System.out.println(name + " Terminates at " + new Date());
         Thread.currentThread().interrupt();
     }
 
@@ -157,7 +157,7 @@ public abstract class MicroService implements Runnable {
      * construction time and is used mainly for debugging purposes.
      */
     public final String getName() {
-        return null;
+        return name;
     }
 
     /**
@@ -173,7 +173,7 @@ public abstract class MicroService implements Runnable {
             try {
                 message = MessageBusImpl.getInstance().awaitMessage(this);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                Thread.currentThread().interrupt();
             }
             messageReactAction.get(message.getClass()).call(message);
         }

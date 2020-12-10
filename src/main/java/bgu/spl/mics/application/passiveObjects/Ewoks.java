@@ -26,9 +26,9 @@ public class Ewoks {
     }
 
     public static void initialize(int numberOfEwoks) {
-        if (instance == null) {
-            instance = new Ewoks(numberOfEwoks);
-        }
+//        if (instance == null) {
+        instance = new Ewoks(numberOfEwoks);
+//        }
     }
 
     public static Ewoks getInstance() {

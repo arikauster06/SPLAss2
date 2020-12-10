@@ -30,15 +30,15 @@ public class Main {
         R2D2Microservice R2D2;
         LandoMicroservice Lando;
 
-        System.out.println(new Date());
+
 
         Diary.getInstance().initializeAttackersCountdown(2);
         Diary.getInstance().initializeTerminationCountdown(5);
 
         Gson gson = new Gson();
         try {
-            Reader reader = Files.newBufferedReader(Paths.get("C:\\Users\\nadav\\Documents\\SPL\\Work2\\SPL211\\src\\main\\java\\bgu\\spl\\mics\\application\\input.json"));
-
+//            Reader reader = Files.newBufferedReader(Paths.get(args[0]));
+            Reader reader = Files.newBufferedReader(Paths.get("input.json"));
             AppInputData inputData = gson.fromJson(reader, AppInputData.class);
 
             Ewoks.initialize(inputData.getEwoks());
@@ -87,7 +87,8 @@ public class Main {
             outputMap.put("LandoTerminate", Diary.getInstance().getLandoTerminate());
 
             Gson outputGson = new Gson();
-            Writer writer = new FileWriter(args[1]);
+//            Writer writer = new FileWriter(args[1]);
+            Writer writer = new FileWriter("output.json");
             outputGson.toJson(outputMap, writer);
             writer.close();
 
