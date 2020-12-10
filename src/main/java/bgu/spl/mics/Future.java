@@ -35,7 +35,7 @@ public class Future<T> {
             try {
                 wait();
             } catch (InterruptedException e) {
-                System.out.println("Future interupted");
+                System.out.println("Future interrupted");
             }
         }
         return result;

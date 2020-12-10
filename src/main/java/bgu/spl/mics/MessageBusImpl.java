@@ -16,8 +16,13 @@ public class MessageBusImpl implements MessageBus {
         private static MessageBusImpl instance = new MessageBusImpl();
     }
 
+    // servicesQueues - contains for each microservice a queue with the messages that the
+    // microservice got and needs to handle with
     private ConcurrentHashMap<MicroService, LinkedBlockingQueue<Message>> servicesQueues;
+    // messageHandlers - for each type of message contains the microservices that able to handle it
     private ConcurrentHashMap<Class<? extends Message>, LinkedBlockingQueue<MicroService>> messageHandlers;
+    // eventFutureDictionary - for each event that was sent, contains the future object that eventually
+    // will contain the event's result
     private ConcurrentHashMap<Event, Future> eventFutureDictionary;
 
 
@@ -33,6 +38,8 @@ public class MessageBusImpl implements MessageBus {
 
     @Override
     public <T> void subscribeEvent(Class<? extends Event<T>> type, MicroService m) {
+        // here we sync in order to make sure that we won't create twice a new queue for each
+        // type of event.
         synchronized (type) {
             if (messageHandlers.get(type) == null) {
                 messageHandlers.put(type, new LinkedBlockingQueue<>());
@@ -43,6 +50,8 @@ public class MessageBusImpl implements MessageBus {
 
     @Override
     public void subscribeBroadcast(Class<? extends Broadcast> type, MicroService m) {
+        // here we sync in order to make sure that we won't create twice a new queue for each
+        // type of broadcast.
         synchronized (type) {
             if (messageHandlers.get(type) == null) {
                 messageHandlers.put(type, new LinkedBlockingQueue<>());
@@ -54,6 +63,7 @@ public class MessageBusImpl implements MessageBus {
     @Override
     @SuppressWarnings("unchecked")
     public <T> void complete(Event<T> e, T result) {
+        // here we sync on a specific event, in order to make sure that it wont be resolved more then once
         synchronized (e) {
             if (eventFutureDictionary.get(e) != null) {
                 eventFutureDictionary.get(e).resolve(result);
@@ -64,23 +74,18 @@ public class MessageBusImpl implements MessageBus {
 
     @Override
     public void sendBroadcast(Broadcast b) {
-//        new Thread(() ->
-//        {
-//            if (messageHandlers.get(b.getClass()) != null)
-//                messageHandlers.get(b.getClass()).PutMessage(b, servicesQueues);
-//        }).start();
-        // in case that there is no one how can handle this type of broadcast we ignore it
+        // in case that there is no one who can handle this type of broadcast we
+        // ignore it (as we were required to do).
         if (messageHandlers.get(b.getClass()) != null &&
                 !messageHandlers.get(b.getClass()).isEmpty()) {
             for (MicroService activator : messageHandlers.get(b.getClass())) {
-                //System.out.println("Sending " + msg + "\t To " + activator);
                 try {
                     servicesQueues.get(activator).put(b);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                // Only Happens if the MicroService called unregistered, and the messageBus deleted it from the mao
-                // In that case the queue is not exists anymore, and further more, the microservice is not handing
+                // Only Happens if the MicroService called unregistered, and the messageBus deleted it.
+                // In that case the queue is not exists anymore, and further more, the microservice is not handling
                 // events nor broadcast anymore
                 catch (NullPointerException e) {
                     System.out.println("MicroService has unregistered");
@@ -92,7 +97,8 @@ public class MessageBusImpl implements MessageBus {
 
     @Override
     public <T> Future<T> sendEvent(Event<T> e) {
-        // in case that there is no one how can handle this type of event we ignore the event
+        // in case that there is no one how can handle this type of event we ignore
+        // the event (as we were required to do).
         if (messageHandlers.get(e.getClass()) == null ||
                 messageHandlers.get(e.getClass()).isEmpty()) {
             return null;
@@ -100,22 +106,24 @@ public class MessageBusImpl implements MessageBus {
 
         Future<T> future = new Future<>();
         eventFutureDictionary.put(e, future);
-//        synchronized (e.getClass()) {
 
         MicroService activator;
         boolean isSent = false;
         do {
             synchronized (e.getClass()) {
+                // we peek, add the activator again and just then deletes it in order to prevent a situation
+                // in which the queue will be empty and cause other threads to return null although there is
+                // someone how is subscribed to the type of event that needs to be handled (but is not
+                // in the queue when the other thread tries to allocate someone to handle an event)
                 activator = messageHandlers.get(e.getClass()).peek();
                 messageHandlers.get(e.getClass()).add(activator);
                 messageHandlers.get(e.getClass()).poll();
-
             }
 
             try {
                 isSent = servicesQueues.get(activator).offer(e);
             }
-            // Only Happens if the MicroService called unregistered, and the messageBus deleted it from the mao
+            // Only Happens if the MicroService called unregistered, and the messageBus deleted it.
             // In that case the queue is not exists anymore, and further more, the microservice is not handing
             // events nor broadcast anymore
             catch (NullPointerException error) {
@@ -123,10 +131,8 @@ public class MessageBusImpl implements MessageBus {
             }
         }
         while (!isSent);
-//            messageHandlers.get(e.getClass()).PutMessage(e, servicesQueues);
 
         return future;
-
     }
 
     @Override
@@ -134,9 +140,7 @@ public class MessageBusImpl implements MessageBus {
         // In here we aren't worried about synchronization, because register happens
         // before any other action which related to "initialization part", which happens in the same thread
         if (servicesQueues.get(m) == null) {
-            //System.out.println(m.name + " registers at " + new Date());
             servicesQueues.put(m, new LinkedBlockingQueue<Message>());
-            //System.out.println(servicesQueues);
         }
     }
 
@@ -148,8 +152,7 @@ public class MessageBusImpl implements MessageBus {
                 LinkedBlockingQueue que = handlerEnu.nextElement();
                 // Unregister can only preformed once.
                 // Moreover the only place where a microservice is being removed from an handler is ,
-                // here
-                // therefore we can call this async methods
+                // here. therefore we can call this async methods
                 if (que.contains(m)) {
                     que.remove(m);
                 }
@@ -162,13 +165,10 @@ public class MessageBusImpl implements MessageBus {
 
     @Override
     public Message awaitMessage(MicroService m) throws InterruptedException {
-
         Message msg = null;
         try {
-            //while (servicesQueues.get((m)) == null) ;
             msg = servicesQueues.get(m).take();
         } catch (NullPointerException e) {
-            //e.printStackTrace();
         }
         return msg;
     }

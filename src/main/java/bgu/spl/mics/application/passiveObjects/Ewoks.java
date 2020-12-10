@@ -1,7 +1,6 @@
 package bgu.spl.mics.application.passiveObjects;
 
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -26,9 +25,7 @@ public class Ewoks {
     }
 
     public static void initialize(int numberOfEwoks) {
-//        if (instance == null) {
         instance = new Ewoks(numberOfEwoks);
-//        }
     }
 
     public static Ewoks getInstance() {
@@ -39,6 +36,8 @@ public class Ewoks {
     }
 
     public boolean acquire(List<Integer> ewoks) {
+        // we sort the ewoks in order to prevent dead lock which is caused from different order
+        // of the resources in different places.
         ewoks.sort(Integer::compareTo);
         for (int i = 0; i < ewoks.size(); i++) {
             ewoksList.get(ewoks.get(i)).acquire();

@@ -1,7 +1,6 @@
 package bgu.spl.mics;
 
 
-import java.util.Date;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
@@ -148,7 +147,6 @@ public abstract class MicroService implements Runnable {
      * message.
      */
     protected final void terminate() {
-//        System.out.println(name + " Terminates at " + new Date());
         Thread.currentThread().interrupt();
     }
 
