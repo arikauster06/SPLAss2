@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestEwok {
 
-    private Ewok ewok;
+    public Ewok ewok;
 
     @BeforeEach
     public void setup() {
