@@ -5,8 +5,6 @@ import bgu.spl.mics.application.messages.AttackEvent;
 import bgu.spl.mics.application.messages.TerminateBroadcast;
 import bgu.spl.mics.application.passiveObjects.Diary;
 
-import java.util.Date;
-
 
 /**
  * C3POMicroservices is in charge of the handling {@link AttackEvent}.
@@ -24,24 +22,10 @@ public class C3POMicroservice extends MicroService {
 
     @Override
     protected void initialize() {
-        //System.out.println("C3PO Initialize");
         subscribeEvent(AttackEvent.class, event -> {
-//            Ewoks.getInstance().acquire(event.getAttack().getSerials());
-//            try {
-//                Thread.sleep(event.getAttack().getDuration());
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//            Ewoks.getInstance().release(event.getAttack().getSerials());
-//            Diary.getInstance().IncrementAttacksAmount();
-            //System.out.println("C3PO attacks with Ewoks: "+ event.getAttack().getSerials().toString() + " Attack Duretion:"+ event.getAttack().getDuration()+" At : " + new Date());
             AttackUtilis.attackCallback.call(event);
-            //System.out.println("C3PO attacks with Ewoks: "+ event.getAttack().getSerials().toString() + " Attack Duretion:"+ event.getAttack().getDuration()+" At : " + new Date());
-            //System.out.println("C3PO finished its' attack");
             Diary.getInstance().setC3POFinish(System.currentTimeMillis());
             complete(event, Boolean.TRUE);
-
-
         });
 
 
@@ -49,8 +33,6 @@ public class C3POMicroservice extends MicroService {
             Diary.getInstance().setC3POTerminate(System.currentTimeMillis());
             terminate();
         });
-
-        //System.out.println("C3PO finish initialize at "+ new Date());
 
         Diary.getInstance().AttackerCountdown();
     }

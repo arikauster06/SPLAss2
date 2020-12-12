@@ -5,8 +5,6 @@ import bgu.spl.mics.application.messages.DeactivationEvent;
 import bgu.spl.mics.application.messages.TerminateBroadcast;
 import bgu.spl.mics.application.passiveObjects.Diary;
 
-import java.util.Date;
-
 /**
  * R2D2Microservices is in charge of the handling {@link DeactivationEvent}.
  * This class may not hold references for objects which it is not responsible for:
@@ -26,7 +24,6 @@ public class R2D2Microservice extends MicroService {
 
     @Override
     protected void initialize() {
-        //System.out.println("R2D2 Initialize");
         subscribeEvent(DeactivationEvent.class, event -> {
             try {
                 Thread.sleep(duration);
@@ -41,11 +38,5 @@ public class R2D2Microservice extends MicroService {
             Diary.getInstance().setR2D2Terminate(System.currentTimeMillis());
             terminate();
         });
-
-        //System.out.println("R2D2 finish initialize at " + new Date());
-    }
-
-    public long getDuration() {
-        return duration;
     }
 }
