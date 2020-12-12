@@ -170,10 +170,10 @@ public abstract class MicroService implements Runnable {
             Message message = null;
             try {
                 message = MessageBusImpl.getInstance().awaitMessage(this);
+                messageReactAction.get(message.getClass()).call(message);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
-            messageReactAction.get(message.getClass()).call(message);
         }
         MessageBusImpl.getInstance().unregister(this);
     }

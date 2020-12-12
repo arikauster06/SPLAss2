@@ -67,6 +67,7 @@ public class FutureTest {
         // remain 0
         assertNotEquals(0, ResolvedTS.get());
 
+        // deleting complicated test
         // If not zero,
         // Test if the get method didn't exit before the resolve actually occurred
 //        assertTrue(ResolvedTS.get() < afterGetTimestamp);

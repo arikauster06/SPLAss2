@@ -40,18 +40,21 @@ public class MessageBusTest {
         };
         Thread t = new Thread(microServiceTest);
         t.start();
+        // added sleep, waiting for microservice to initialize
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         microServiceTest.sendEvent(new TestEvent());
+//        microServiceTest.sendEvent(new TestEvent2());
 
-        System.out.println("Wait");
         assertEquals(TestText, future.get());
 
-        microServiceTest.terminate();
+        //Removing Terminate and unregister by "hand"
+        //microServiceTest.terminate();
         t.interrupt();
+        MessageBusImpl.getInstance().unregister(microServiceTest);
     }
 
     @Test
@@ -64,12 +67,14 @@ public class MessageBusTest {
             @Override
             protected void initialize() {
                 subscribeEvent(TestEvent.class, c -> {
+                    // Sending the actual event and not a new event
                     complete(c, TestText);
                 });
             }
         };
         Thread t = new Thread(microServiceTest);
         t.start();
+        // added sleep, waiting for microservice to initialize
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -78,8 +83,10 @@ public class MessageBusTest {
         Future<String> future = microServiceTest.sendEvent(new TestEvent());
         assertEquals(TestText, future.get());
 
-        microServiceTest.terminate();
+        // deleted terminate and unregistering by hand
+        //microServiceTest.terminate();
         t.interrupt();
+        MessageBusImpl.getInstance().unregister(microServiceTest);
 
     }
 
@@ -95,13 +102,13 @@ public class MessageBusTest {
             @Override
             protected void initialize() {
                 subscribeBroadcast(TestBroadcast.class, c -> {
-
                     future.resolve(TestText);
                 });
             }
         };
         Thread t = new Thread(microServiceTest);
         t.start();
+        // adding sleep waiting for microservice to initialize
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
@@ -109,8 +116,10 @@ public class MessageBusTest {
         }
         microServiceTest.sendBroadcast(new TestBroadcast());
         assertEquals(TestText, future.get());
-        microServiceTest.terminate();
+        // Deleting terminate, unregistering by hand
+//        microServiceTest.terminate();
         t.interrupt();
+        MessageBusImpl.getInstance().unregister(microServiceTest);
     }
 
     @Test
@@ -140,6 +149,7 @@ public class MessageBusTest {
         Thread t2 = new Thread(broadcastListener2);
         t1.start();
         t2.start();
+        // added sleep, waiting for microservice to initialize
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -149,10 +159,13 @@ public class MessageBusTest {
         assertEquals(TestText, future1.get());
         assertEquals(TestText2, future2.get());
 
-        broadcastListener1.terminate();
-        broadcastListener2.terminate();
+        // Deleting terminate
+//        broadcastListener1.terminate();
+//        broadcastListener2.terminate();
         t1.interrupt();
         t2.interrupt();
+        MessageBusImpl.getInstance().unregister(broadcastListener1);
+        MessageBusImpl.getInstance().unregister(broadcastListener2);
     }
 
     //unregister
@@ -179,6 +192,7 @@ public class MessageBusTest {
 
         Thread t = new Thread(microServiceTest);
         t.start();
+        // added sleep, waiting for microservice to initialize
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -193,6 +207,7 @@ public class MessageBusTest {
 
         EventSender.terminate();
 
+        MessageBusImpl.getInstance().unregister(microServiceTest);
 
     }
 }
